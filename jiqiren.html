@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天机器人</title>
+    <link rel="stylesheet" href="css/jiqiren.css">
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <div class="mian">
+        <div class="container">
+            <div class="robot">
+                <a href="#" class="f_1">机</a>
+                <p class="f_1"> 我要吃西红柿炒蛋</p>
+            </div>
+            <div class="my" style="display: none;">
+                <a href="#">我</a>
+                <p class="news">
+                    hello,word
+                </p>
+            </div>
+        </div>
+        <div class="control">
+            <input type="text" class="inputBox f_1" name="" id="">
+            <input type="button" value="发 送">
+        </div>
+        <script>
+            $(function() {
+                $("input[type='text']").focus();
+                $("input[type='button']").on('click', function() {
+                    my_key();
+                });
+                $("body").keydown(function() {
+                    if (event.keyCode == "13") { //keyCode=13是回车键
+                        my_key();
+                    }
+                });
+
+                function my_key() {
+                    str = $("input[type='text']").val();
+                    if (str == null || str == 'null' || str == undefined || str == 'undefined' || str.match(/^[\s]*$/)) {
+                        alert('靓仔会打字吗？');
+                        $("input[type='text']").focus();
+                        $("input[type='text']").val("");
+                    } else {
+                        var $cloneSelf = $(".my").first().clone();
+                        $(".container").append($cloneSelf);
+                        $cloneSelf.show();
+                        $cloneSelf.find("p").html($("input[type='text']").val());
+
+                        //1、创建对象 new XMLHttpRequest()
+                        var xhr = new XMLHttpRequest();
+                        //2、设置请求行 .open('请求方式', 'URL')（get请求数据写在url后面）
+                        xhr.open('post', 'https://api.ownthink.com/bot');
+                        //3、设置请求头 .setRequestHeader("Content-type","application/x-www-form-urlencoded")（get请求可以省略，post不发送数据也可以省略）
+                        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        //3.5注册回调函数 .onload = function(){ .responseText}
+                        xhr.onload = function() {
+                            if (xhr.readyState == 4 && xhr.status == 200) {
+                                $content = JSON.parse(xhr.responseText);
+                                console.log($content.data.info.text);
+                                var $cloneRobot = $(".robot").first().clone();
+                                $cloneRobot.appendTo(".container");
+                                $cloneRobot.find("p").html($content.data.info.text);
+                                //获取DIV高度以便于后续下滑
+                                var $content_heiht = $(".container").prop('scrollHeight');
+
+                                function Tiem_Go() {
+                                    $(".container").animate({
+                                        scrollTop: $content_heiht
+                                    }, 500)
+                                };
+                                setTimeout(Tiem_Go(), 3000);
+                                console.log($(".container"));
+                                $("input[type='text']").focus();
+                            };
+
+                        };
+                        //4、请求主体发送 .send('name=1&sex=1')（get请求为空，或者写null，post请求数据写这里，如果没有数据，直接为空或者写null）
+                        xhr.send('spoken=' + $("input[type='text']").val() + '&appid=58bbe9932f935080b298f2582080607b');
+                        $("input[type='text']").val("");
+                    }
+
+                };
+            });
+        </script>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

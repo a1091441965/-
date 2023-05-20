@@ -1,0 +1,273 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	aliceblue;
+}
+
+.site-topbar {
+	height: 40px;
+	width: 100%;
+	min-width: 1226px;
+	background-color: #333;
+}
+
+/* 顶部居中 */
+.container {
+	margin: auto;
+	width: 1226px;
+	height: 40px;
+}
+
+/* 文字 */
+.site-topbar {
+	overflow: hidden;
+}
+
+.site-topbar .topbar-nav a {
+	margin-right: 10px;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+
+.site-topbar .topbar-nav {
+	float: left;
+	line-height: 40px;
+}
+
+.topbar-nav a:hover {
+	color: #fff;
+}
+
+/* 矢量图标 */
+.Shopping-Cart {
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.2);
+	text-align: center;
+}
+
+.site-topbar .iconfont {
+	font-size: 20px;
+	float: right;
+}
+
+.Shopping-Cart span {
+	font-size: 12px;
+}
+
+.Shopping-Cart:hover {
+	color: #ff6700;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+/* 用户登录 */
+.Sign {
+	float: right;
+	margin-right: 30px;
+}
+
+.Sign-in {
+	height: 40px;
+	line-height: 40px;
+}
+
+.Sign-in a {
+	margin-right: 10px;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+
+.Sign-in a:hover {
+	color: #fff;
+}
+
+/* 导航栏 */
+.site-header {
+	clear: both;
+	margin: auto;
+	width: 1226px;
+	overflow: hidden;
+}
+
+/* 小米LOGO */
+.header-logo {
+	float: left;
+	display: block;
+	margin-top: 22px;
+	width: 55px;
+	height: 55px;
+	background-color: #ff6700;
+	background-image: url(../img/mi-logo.png);
+	background-position: center;
+	transition: all 0.2s linear;
+}
+
+.header-logo:hover {
+	background-image: url(../img/mi-home.png);
+	background-position: 50px 0;
+}
+
+/* 弹出式导航栏 */
+.header-nav {
+	display: block;
+	width: 800px;
+	height: 100px;
+	float: left;
+	margin-left: 10px;
+	padding-right: 20px;
+
+}
+
+.nav-list {
+	display: block;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	line-height: 70px;
+	padding-left: 0;
+	margin-left: 177px;
+}
+
+.nav-list li {
+	float: left;
+	margin-left: 16px;
+}
+
+.nav-list li a {
+	color: #333;
+	font-size: 16px;
+	transition: all 0.2s linear;
+}
+
+.nav-list li a:hover {
+	color: #FF6700;
+}
+
+/* 搜索框 */
+.header-search {
+	float: left;
+	margin-top: 25px;
+	margin-left: 62px;
+}
+
+.header-search .search-go input[type=search] {
+	width: 225px;
+	height: 50px;
+	padding-left: 10px;
+	border: 1px solid #c5c5c5;
+}
+
+#search-box {
+	width: 52px;
+	height: 48px;
+	float: right;
+	text-align: center;
+	background-color: white;
+	border: 1px solid #c5c5c5;
+	transition: all 0.5s linear;
+}
+
+#search-img {
+	line-height: 48px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.search-go:hover #search-hover {
+	border: 1px solid #FF6700;
+}
+
+.search-go:hover #search-box {
+	border: 1px solid #FF6700;
+
+}
+
+#search-box:hover {
+	color: white;
+	background-color: #FF6700;
+}
+
+/* 中心轮播图 */
+.home-hero {
+	margin: auto;
+	width: 1226px;
+	height: 460px;
+}
+
+/* 设置相对定位,使绝对定位有位置 */
+.wrap {
+	width: 1226px;
+	height: 460px;
+	position: relative;
+}
+
+/* 继承宽高 */
+.list {
+	width: 100%;
+	height: 100%;
+}
+
+/* 给图片宽高绝对定位,然后层叠在一起 */
+.item {
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 50px;
+	background-size: 100%;
+	position: absolute;
+}
+
+/* 添加图片 */
+.item:nth-child(1) {
+	background-image: url(../img/TV.webp);
+}
+
+.item:nth-child(2) {
+	background-image: url(../img/bracelet-5.webp);
+}
+
+.item:nth-child(3) {
+	background-image: url(../img/ice-box.webp);
+}
+
+.item:nth-child(4) {
+	background-image: url(../img/k30.jpg);
+}
+
+.item:nth-child(5) {
+	background-image: url(../img/k30i.webp);
+}
+
+/* 按钮 */
+.btn {
+	width: 100px;
+	height: 100px;
+	font-size: 60px;
+	position: absolute;
+	top: 180px;
+}
+
+#geNext {
+	right: 0;
+	text-align: right;
+}
+
+#gePre {
+	left: 0;
+	text-align: left;
+}
+
+.item.active {
+	z-index: 10;
+}

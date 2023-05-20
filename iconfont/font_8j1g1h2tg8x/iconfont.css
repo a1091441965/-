@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1594197053831'); /* IE9 */
+  src: url('iconfont.eot?t=1594197053831#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOgAAsAAAAACCAAAANRAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDZIM9ATYCJAMQCwoABCAFhG0HPRskBxHVm4vIfiRkZwt3gNHbUUX7aJwZSgnPk92/586dRWYf+LsQFStAG5iVqCp1XP2kA1yq2wDYnOuBjYowQ/kWNftBWl52aZ7+//1mxaQUvQ28l/c+ItZFJJE4NCJkr4RkOrW01LZQVmIf6Inq+IxJHBSGVwe9U49DAEc1miCduvSKCbFYuwSQmdOmjCPMubEtlUKI4NdctMgOPEKz0TwAtoe/Lz9pKiEYPMU62G9y54m0+1L9y39dkaxgpElopgsCwlWgQBPAgkytDY9H42QTFKctt7QEQkIMTDUz78v/JGG0RzGH9r88MAgK4mOVpwBozqQUvlR3xTDwZZ4YAl/+l6EAH8QaDk4fhGcsvVQYoJictd+UyuVS1f1xbtMl8VZejqLNF7ErLgyO1E1KlckBOU3yE+PTXmoaQleaYQ3LYYGUv82KC8syT54M9p4+HZJ9/HiQffRouZyxTYzZotGrXr50SJAlRZqUcTMk3FTrngzGSYR7xgjAHFGBDj0jTE1c+1JhfYFi4/BIkfyGnfHgy4MfJ4MLS2pQYsZRhMJWMZcfJRh3cIFgMOUx+FKMsa5I+AtpemvF0GGyZIkMGyq0PcMkJ9+49uc+Mm2a9DH0ob+PDKW3rr/6yXVj1Gf38UrcMWnWEJK3e/X+fd1byGheoxvcwH5d21XeaDeqU7zaBYu9oyfNErPs1KllYTAgTO06fWn64XYnTrR7Rz8Akpd6WZsC6Fjz7hf/Da7ztatjsq3+hJEF4GXjs63DlmSFRVfAf9LAmh+qATusrrM81qp6V208y9KNAAADOBzwG7NQ4M0U1jIcByHMaQQwBFQFJaQO2dKbgEdEc/AJaQuOxnS9OqLIfBSxVYBGrCUg5LgOhgw3QcnxkGzpr8Gjgt/gkxMFx2Ap3jKinqh2d2BsBHto/2A7GpR8sosqb6jfoeGsLuS9kJONQJWXxcwFB+QpjqSPrkUUKKYIZ/I0DIFgZHLYSW5Exn1RqLpvyjuKkx0Hxkawh/YPtqNB+YNlV/r5G+p3aLilrab6Qk52fqjyEiBfzAPUditfSR9diyhQTBHOJIjBThKM9escdpKbAfFxXzDdFGrOl7fGNzwEOKxVVoyoWPFYXvvqbHpeG5uE+D+ZAAAAAA==') format('woff2'),
+  url('iconfont.woff?t=1594197053831') format('woff'),
+  url('iconfont.ttf?t=1594197053831') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1594197053831#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-:before {
+  content: "\e671";
+}
+
+.icon-F:before {
+  content: "\e61f";
+}
+
+.icon-history:before {
+  content: "\e6f8";
+}
+

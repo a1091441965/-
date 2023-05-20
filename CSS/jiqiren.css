@@ -1,0 +1,33 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    .mian {
+        width: 400px;
+        margin: 0 auto;
+    }
+    
+    .container {
+        border: 1px solid skyblue;
+        overflow-y: scroll;
+        height: 200px;
+    }
+    
+    .control {
+        border: 1px solid skyblue;
+        padding: 10px 20px;
+    }
+    
+    .my {
+        padding: 0 10px 0 0;
+        text-align: right;
+    }
